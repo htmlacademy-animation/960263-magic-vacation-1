@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .form__label {
@@ -43,6 +44,7 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  animation: extendFormField 0.5s;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -79,7 +81,7 @@
 }
 
 .form__button {
-  flex-grow: 1;
+  flex-grow: 0;
 
   @media (orientation: portrait) {
     position: relative;
@@ -144,5 +146,12 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
+  }
+}
+
+@keyframes extendFormField {
+  from {
+    width: 0;
+    padding: 0;
   }
 }
