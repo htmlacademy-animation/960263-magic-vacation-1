@@ -44,6 +44,7 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  animation: extendFormField 0.5s;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -138,5 +139,12 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
+  }
+}
+
+@keyframes extendFormField {
+  from {
+    width: 0;
+    padding: 0;
   }
 }
