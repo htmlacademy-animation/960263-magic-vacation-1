@@ -267,7 +267,9 @@
 
     &.active {
       &::after {
+        left: 0;
         width: 100%;
+        transition: width 0.3s ease 0.5s;
       }
     }
 
